@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
-using UsingJSONTextFileAsADataStore.Models;
+using UsingEntityFrameworkWithMySql.Models;
 
-namespace UsingJSONTextFileAsADataStore.Services
+namespace UsingEntityFrameworkWithMySql.Services
 {
     [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
     public class SampleDbContext : System.Data.Entity.DbContext

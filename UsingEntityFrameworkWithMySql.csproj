@@ -7,8 +7,8 @@
     <ProjectGuid>{CFEA58F1-B27C-4C93-8AC1-C2B66DCA915D}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UsingJSONTextFileAsADataStore</RootNamespace>
-    <AssemblyName>UsingJSONTextFileAsADataStore</AssemblyName>
+    <RootNamespace>UsingEntityFrameworkWithMySql</RootNamespace>
+    <AssemblyName>UsingEntityFrameworkWithMySql</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25029.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingJSONTextFileAsADataStore", "UsingJSONTextFileAsADataStore.csproj", "{CFEA58F1-B27C-4C93-8AC1-C2B66DCA915D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingEntityFrameworkWithMySql", "UsingEntityFrameworkWithMySql.csproj", "{CFEA58F1-B27C-4C93-8AC1-C2B66DCA915D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

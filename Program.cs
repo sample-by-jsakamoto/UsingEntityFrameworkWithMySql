@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
-using UsingJSONTextFileAsADataStore.Models;
-using UsingJSONTextFileAsADataStore.Services;
+using UsingEntityFrameworkWithMySql.Models;
+using UsingEntityFrameworkWithMySql.Services;
 
 class Program
 {
