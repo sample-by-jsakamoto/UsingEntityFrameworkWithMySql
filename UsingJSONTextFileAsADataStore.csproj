@@ -64,7 +64,6 @@
   <ItemGroup>
     <Compile Include="Models\Person.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Services\PeopleStore.cs" />
     <Compile Include="Services\SampleDbContext.cs" />
   </ItemGroup>
   <ItemGroup>

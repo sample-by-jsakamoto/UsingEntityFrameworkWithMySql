@@ -7,7 +7,10 @@ class Program
 {
     static void Main()
     {
-        var store = new PeopleStore();
+        System.Data.Entity.Database.SetInitializer(
+            new System.Data.Entity.CreateDatabaseIfNotExists<SampleDbContext>());
+
+        var store = new SampleDbContext();
         var quit = false;
         do
         {
@@ -40,25 +43,26 @@ class Program
         Console.WriteLine("Good bye.");
     }
 
-    private static void DeletePerson(PeopleStore store)
+    private static void DeletePerson(SampleDbContext store)
     {
         Console.Write("Enter id:");
         var id = default(int);
         if (int.TryParse(Console.ReadLine(), out id) == false) return;
 
-        var found = store.Delete(id);
-        if (found == false)
+        var personToDelete = store.People.Find(id);
+        if (personToDelete == null)
         {
             Console.WriteLine("ERROR: person not found.");
             return;
         }
 
+        store.People.Remove(personToDelete);
         store.SaveChanges();
 
         Console.WriteLine("OK");
     }
 
-    private static void UpdatePerson(PeopleStore store)
+    private static void UpdatePerson(SampleDbContext store)
     {
         Console.Write("Enter id:");
         var id = default(int);
@@ -88,7 +92,7 @@ class Program
         Console.WriteLine("OK");
     }
 
-    private static void AddPerson(PeopleStore store)
+    private static void AddPerson(SampleDbContext store)
     {
         Console.Write("Enter name:");
         var name = Console.ReadLine();
@@ -104,13 +108,13 @@ class Program
             Age = age
         };
 
-        store.Add(person);
+        store.People.Add(person);
         store.SaveChanges();
 
         Console.WriteLine("OK");
     }
 
-    private static void ListPeople(PeopleStore store)
+    private static void ListPeople(SampleDbContext store)
     {
         foreach (var persopn in store.People)
         {
